@@ -14,9 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="{{route('about')}}">About</a></li>
-        <li><a href="#"><i class="fa fa-phone"></i> Contact</a></li>
+        <li><a href="{{route('contact')}}"><i class="fa fa-phone"></i> Contact</a></li>
         @if(Auth::check())
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>

@@ -21,6 +21,11 @@ Route::get('/about', [
     'as' => 'about'
 ]);
 
+Route::get('/contact', [
+    'uses' => 'PostController@getContact',
+    'as' => 'contact'
+]);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [
         'uses' => 'AdminController@getSignin',
