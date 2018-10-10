@@ -8,14 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Jobus</a>
+      <a class="navbar-brand" href="/">Jobus.com</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-        <li><a href="{{route('about')}}">About</a></li>
+        <li><a href="{{route('about')}}"><i class="fa fa-users"></i> About</a></li>
         <li><a href="{{route('contact')}}"><i class="fa fa-phone"></i> Contact</a></li>
         @if(Auth::check())
         <li class="dropdown">
