@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Pick Me</a>
+      <a class="navbar-brand" href="/">Jobus</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -23,7 +23,7 @@
             <li><a href="#">Signin</a></li>
             <li><a href="#">Signup</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="{{route('logout')}}">Logout</a></li>
           </ul>
         </li>
       </ul>

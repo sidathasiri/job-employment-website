@@ -19,21 +19,25 @@ Route::get('/', [
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [
         'uses' => 'AdminController@getSignin',
-        'as' => 'getsignin'
+        'as' => 'getsignin',
+        'middleware' => 'guest'
     ]);
     
     Route::post('/signin', [
         'uses' => 'AdminController@postSignin',
-        'as' => 'postsignin'
+        'as' => 'postsignin',
+        'middleware' => 'guest'
     ]);
     
     Route::get('/profile', [
         'uses' => 'AdminController@getProfile',
-        'as' => 'profile'
+        'as' => 'profile',
+        'middleware' => 'auth'
     ]);
     
     Route::get('/logout', [
         'uses' => 'AdminController@getLogout',
-        'as' => 'logout'
+        'as' => 'logout',
+        'middleware' => 'auth'
     ]);
 });
