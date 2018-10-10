@@ -16,6 +16,11 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
+Route::get('/about', [
+    'uses' => 'PostController@getAbout',
+    'as' => 'about'
+]);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [
         'uses' => 'AdminController@getSignin',
