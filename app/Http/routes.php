@@ -14,6 +14,13 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/admin', function () {
-    return view('admin.signin');
-});
+
+Route::get('/admin', [
+    'uses' => 'AdminController@getSignin',
+    'as' => 'getsignin'
+]);
+
+Route::post('/admin/signin', [
+    'uses' => 'AdminController@postSignin',
+    'as' => 'postsignin'
+]);
