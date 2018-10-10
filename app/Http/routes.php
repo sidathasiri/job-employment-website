@@ -44,6 +44,12 @@ Route::group(['prefix' => 'admin'], function(){
         'as' => 'profile',
         'middleware' => 'auth'
     ]);
+
+    Route::get('/dashboard', [
+        'uses' => 'AdminController@getDashboard',
+        'as' => 'dashboard',
+        'middleware' => 'auth'
+    ]);
     
     Route::get('/logout', [
         'uses' => 'AdminController@getLogout',

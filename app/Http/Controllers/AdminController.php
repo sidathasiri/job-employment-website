@@ -46,4 +46,8 @@ class AdminController extends Controller
         Auth::logout();
         return redirect()->route('getsignin');
     }
+
+    public function getDashboard(){
+        return view('admin.dashboard');
+    }
 }
