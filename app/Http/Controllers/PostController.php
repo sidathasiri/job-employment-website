@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\JobPost;
 
 class PostController extends Controller
 {
     public function getIndex(){
-        return view('index');
+        $posts = JobPost::all();
+        return view('index', ['posts' => $posts]);
     }
 
     public function getAbout(){
