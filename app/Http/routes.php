@@ -16,17 +16,24 @@ Route::get('/', [
     'as' => 'index'
 ]);
 
-Route::get('/admin', [
-    'uses' => 'AdminController@getSignin',
-    'as' => 'getsignin'
-]);
-
-Route::post('/admin/signin', [
-    'uses' => 'AdminController@postSignin',
-    'as' => 'postsignin'
-]);
-
-Route::get('/admin/profile', [
-    'uses' => 'AdminController@getProfile',
-    'as' => 'profile'
-]);
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('/', [
+        'uses' => 'AdminController@getSignin',
+        'as' => 'getsignin'
+    ]);
+    
+    Route::post('/signin', [
+        'uses' => 'AdminController@postSignin',
+        'as' => 'postsignin'
+    ]);
+    
+    Route::get('/profile', [
+        'uses' => 'AdminController@getProfile',
+        'as' => 'profile'
+    ]);
+    
+    Route::get('/logout', [
+        'uses' => 'AdminController@getLogout',
+        'as' => 'logout'
+    ]);
+});

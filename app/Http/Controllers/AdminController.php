@@ -39,4 +39,8 @@ class AdminController extends Controller
     public function getProfile(){
         return view('admin.profile');
     }
+
+    public function getLogout(){
+        Auth::logout();
+    }
 }
