@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [
+    'uses' => 'PostController@getIndex',
+    'as' => 'index'
+]);
 
 Route::get('/admin', [
     'uses' => 'AdminController@getSignin',
@@ -23,4 +24,9 @@ Route::get('/admin', [
 Route::post('/admin/signin', [
     'uses' => 'AdminController@postSignin',
     'as' => 'postsignin'
+]);
+
+Route::get('/admin/profile', [
+    'uses' => 'AdminController@getProfile',
+    'as' => 'profile'
 ]);

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -23,6 +24,19 @@ class AdminController extends Controller
     }
 
     public function postSignin(Request $request){
-        
+        $this->validate($request, [
+            'email' => 'email | required',
+            'password' => 'required'
+        ]);
+
+        if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
+            return redirect()->route('profile');
+        }
+        //add error message when fail to login
+        return redirect()->back();
+    }
+
+    public function getProfile(){
+        return view('admin.profile');
     }
 }

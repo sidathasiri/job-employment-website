@@ -3,10 +3,6 @@
 Admin Signin
 @endsection
 
-<!-- <div class="row">
-   <div class="col-lg-6 col-lg-offset-3 text-center">center</div>
-</div> -->
-
 @section('content')
 <div class="row">
     <div class="col-lg-8 col-lg-offset-3">
