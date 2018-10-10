@@ -30,7 +30,7 @@ class AdminController extends Controller
         ]);
 
         if(Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])){
-            return redirect()->route('profile');
+            return redirect()->route('dashboard');
         }
         //add error message when fail to login
         return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors([
@@ -49,5 +49,9 @@ class AdminController extends Controller
 
     public function getDashboard(){
         return view('admin.dashboard');
+    }
+
+    public function getAddNew(){
+        return view('admin.addjob');
     }
 }

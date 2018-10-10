@@ -50,6 +50,12 @@ Route::group(['prefix' => 'admin'], function(){
         'as' => 'dashboard',
         'middleware' => 'auth'
     ]);
+
+    Route::get('/add-new-job', [
+        'uses' => 'AdminController@getAddNew',
+        'as' => 'addnew',
+        'middleware' => 'auth'
+    ]);
     
     Route::get('/logout', [
         'uses' => 'AdminController@getLogout',
