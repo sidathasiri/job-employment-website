@@ -33,7 +33,9 @@ class AdminController extends Controller
             return redirect()->route('profile');
         }
         //add error message when fail to login
-        return redirect()->back();
+        return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors([
+            'approve' => 'Wrong password or this account not approved yet.',
+        ]);
     }
 
     public function getProfile(){
