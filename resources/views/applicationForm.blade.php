@@ -91,6 +91,6 @@ Application Form
       <p style="color:white; margin-top:12px">SUBMIT YOUR DETAILS  FOURTH PAGE</p>
     </div>
   </div>
-  
+  {{ csrf_field() }}
 </form>
 @endsection
