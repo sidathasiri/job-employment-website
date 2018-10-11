@@ -8,6 +8,14 @@ Application Form
   <h1>Application Form <small>Personal Information Required for an Employment Application</small></h1>
 </div>
 
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        @foreach($errors->all() as $error)
+            <p>{{$error}}</p>
+        @endforeach
+    </div>
+    @endif
+
 <form class="form-horizontal" action="{{route('submitApplicaiton')}}" method="post">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Name</label>

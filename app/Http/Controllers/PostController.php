@@ -29,6 +29,18 @@ class PostController extends Controller
     }
 
     public function submitApplicaiton(Request $request){
+        $this->validate($request, [
+            'name' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'zip' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'securityNumber' => 'required',
+            'isEligible' => 'required',
+            'haveCertificate' => 'required',
+            'isConvicted' => 'required',
+        ]);
         $application = new Application([
             'name' => $request->input('name'),
             'city' => $request->input('city'),
