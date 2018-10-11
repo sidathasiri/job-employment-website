@@ -21,9 +21,9 @@ Route::get('/about', [
     'as' => 'about'
 ]);
 
-Route::get('/contact', [
-    'uses' => 'PostController@getContact',
-    'as' => 'contact'
+Route::get('/application', [
+    'uses' => 'PostController@getApplication',
+    'as' => 'applicaiton'
 ]);
 
 Route::get('/paymentDetails', [

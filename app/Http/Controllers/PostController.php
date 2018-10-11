@@ -18,8 +18,8 @@ class PostController extends Controller
         return view('about');
     }
 
-    public function getContact(){
-        return view('contact');
+    public function getApplication(){
+        return view('applicationForm');
     }
 
     public function getPaymentDetails(){
