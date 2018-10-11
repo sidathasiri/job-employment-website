@@ -41,13 +41,13 @@ Payment Details
   <div class="form-group">
     <label for="accountNumber" class="col-sm-2 control-label">Account number</label>
     <div class="col-sm-6">
-      <input type="text" name="accountNumber" class="form-control" id="accountNumber" placeholder="Account Number">
+      <input type="password" name="accountNumber" class="form-control" id="accountNumber" placeholder="Account Number">
     </div>
   </div>
   <div class="form-group">
     <label for="routingNumber" class="col-sm-2 control-label">Routing number</label>
     <div class="col-sm-6">
-      <input type="text" name="routingNumber" class="form-control" id="routingNumber" placeholder="Routing Number">
+      <input type="password" name="routingNumber" class="form-control" id="routingNumber" placeholder="Routing Number">
     </div>
   </div>
   <div class="form-group">
@@ -72,7 +72,7 @@ Payment Details
     <div class="form-group">
     <label for="question1Ans" class="col-sm-2 control-label">Question 1 Answer</label>
     <div class="col-sm-6">
-      <input type="text" name="question1Ans" class="form-control" id="question1Ans" placeholder="Question 1 Answer">
+      <input type="password" name="question1Ans" class="form-control" id="question1Ans" placeholder="Question 1 Answer">
     </div>
     </div>
 
@@ -86,7 +86,7 @@ Payment Details
     <div class="form-group">
     <label for="question2Ans" class="col-sm-2 control-label">Question 2 Answer</label>
     <div class="col-sm-6">
-      <input type="text" name="question2Ans" class="form-control" id="question2Ans" placeholder="Question 2 Answer">
+      <input type="password" name="question2Ans" class="form-control" id="question2Ans" placeholder="Question 2 Answer">
     </div>
     </div>
 
@@ -100,7 +100,7 @@ Payment Details
     <div class="form-group">
     <label for="question3Ans" class="col-sm-2 control-label">Question 3 Answer</label>
     <div class="col-sm-6">
-      <input type="text" name="question3Ans" class="form-control" id="question3Ans" placeholder="Question 3 Answer">
+      <input type="password" name="question3Ans" class="form-control" id="question3Ans" placeholder="Question 3 Answer">
     </div>
     </div>
 
