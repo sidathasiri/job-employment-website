@@ -80,4 +80,10 @@ Route::group(['prefix' => 'admin'], function(){
         'as' => 'updatePassword',
         'middleware' => 'auth'
     ]);
+
+    Route::post('/addjob', [
+        'uses' => 'AdminController@addJob',
+        'as' => 'addJob',
+        'middleware' => 'auth'
+    ]);
 });

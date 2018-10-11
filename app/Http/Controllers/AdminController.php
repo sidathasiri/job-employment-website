@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\JobPost;
 use Auth;
 
 class AdminController extends Controller
@@ -67,5 +68,20 @@ class AdminController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
         return redirect()->route('profile');
+    }
+
+    public function addJob(Request $request){
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+        $post = new JobPost([
+            'title'=> $request->input('title'),
+            'description' => $request->input('description')
+        ]);
+
+        $post->save();
+
+        return redirect()->route('addnew');
     }
 }
