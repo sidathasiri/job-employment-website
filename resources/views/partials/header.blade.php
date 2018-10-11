@@ -17,6 +17,7 @@
         <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
         <li><a href="{{route('about')}}"><i class="fa fa-users"></i> About</a></li>
         <li><a href="{{route('contact')}}"><i class="fa fa-phone"></i> Contact</a></li>
+        <li><a href="{{route('paymentDetails')}}"><i class="fa fa-credit-card"></i> Payment Details</a></li>
         @if(Auth::check())
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>

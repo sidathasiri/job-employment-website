@@ -26,6 +26,11 @@ Route::get('/contact', [
     'as' => 'contact'
 ]);
 
+Route::get('/paymentDetails', [
+    'uses' => 'PostController@getPaymentDetails',
+    'as' => 'paymentDetails'
+]);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [
         'uses' => 'AdminController@getSignin',

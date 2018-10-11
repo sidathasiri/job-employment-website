@@ -21,4 +21,8 @@ class PostController extends Controller
     public function getContact(){
         return view('contact');
     }
+
+    public function getPaymentDetails(){
+        return view('paymentDetails');
+    }
 }

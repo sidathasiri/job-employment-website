@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('title')
-Contact
+Payment Details
 @endsection
 
 @section('content')
 <div class="page-header">
-  <h1>Contact</h1>
+  <h1>Payment Details</h1>
 </div>
 
 <form class="form-horizontal">
