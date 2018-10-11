@@ -12,7 +12,7 @@
 </div>
 
 @foreach($posts as $post)
-<div class="well">
+<!-- <div class="well"> -->
   <div class="panel panel-primary">
     <div class="panel-heading">{{$post->title}}</div>
       <div class="panel-body">
@@ -24,6 +24,6 @@
       </div>
       @endif
   </div>
-</div>
+<!-- </div> -->
 @endforeach
 @endsection
