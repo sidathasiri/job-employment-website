@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use App\JobPost;
+use App\Application;
+use App\Payment;
 use Auth;
 
 class AdminController extends Controller
@@ -49,7 +51,8 @@ class AdminController extends Controller
     }
 
     public function getDashboard(){
-        return view('admin.dashboard');
+        $applications = Application::all();
+        return view('admin.dashboard', ['applications' => $applications]);
     }
 
     public function getAddNew(){
