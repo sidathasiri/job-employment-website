@@ -54,4 +54,18 @@ class AdminController extends Controller
     public function getAddNew(){
         return view('admin.addjob');
     }
+
+    public function updateEmail(Request $request){
+        $user = Auth::user();
+        $user->email = $request->input('email');
+        $user->save();
+        return redirect()->route('profile');
+    }
+
+    public function updatePassword(Request $request){
+        $user = Auth::user();
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+        return redirect()->route('profile');
+    }
 }

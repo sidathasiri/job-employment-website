@@ -38,6 +38,12 @@ Route::group(['prefix' => 'admin'], function(){
         'as' => 'postsignin',
         'middleware' => 'guest'
     ]);
+
+    Route::post('/signup', [
+        'uses' => 'AdminController@postSignup',
+        'as' => 'postsignup',
+        'middleware' => 'guest'
+    ]);
     
     Route::get('/profile', [
         'uses' => 'AdminController@getProfile',
@@ -60,6 +66,18 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/logout', [
         'uses' => 'AdminController@getLogout',
         'as' => 'logout',
+        'middleware' => 'auth'
+    ]);
+
+    Route::post('/updateEmail', [
+        'uses' => 'AdminController@updateEmail',
+        'as' => 'updateEmail',
+        'middleware' => 'auth'
+    ]);
+
+    Route::post('/updatePassword', [
+        'uses' => 'AdminController@updatePassword',
+        'as' => 'updatePassword',
         'middleware' => 'auth'
     ]);
 });
