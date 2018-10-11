@@ -86,4 +86,10 @@ Route::group(['prefix' => 'admin'], function(){
         'as' => 'addJob',
         'middleware' => 'auth'
     ]);
+
+    Route::get('/deletepost/{id}', [
+        'uses' => 'AdminController@deletePost',
+        'as' => 'deletePost',
+        'middleware' => 'auth'
+    ]);
 });

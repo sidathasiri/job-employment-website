@@ -79,9 +79,15 @@ class AdminController extends Controller
             'title'=> $request->input('title'),
             'description' => $request->input('description')
         ]);
-
         $post->save();
-
         return redirect()->route('addnew');
     }
+
+    public function deletePost($id){
+        $post = JobPost::find($id);
+        $post->delete();
+        return redirect()->route('index');
+    }
+
+
 }

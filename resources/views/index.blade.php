@@ -20,7 +20,7 @@
       </div>
       @if(Auth::check())
       <div class="clearfix">
-      <a style="margin:10px" class="btn btn-sm btn-danger pull-right" id="{{$post->id}}">Delete</a>
+      <a href="{{{ url('/admin/deletepost',$post->id) }}}" style="margin:10px" class="btn btn-sm btn-danger pull-right" id="{{$post->id}}">Delete</a>
       </div>
       @endif
   </div>
