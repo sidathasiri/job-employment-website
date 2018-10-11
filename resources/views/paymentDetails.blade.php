@@ -8,7 +8,15 @@ Payment Details
   <h1>Payment Details</h1>
 </div>
 
-<form class="form-horizontal">
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        @foreach($errors->all() as $error)
+            <p>{{$error}}</p>
+        @endforeach
+    </div>
+    @endif
+
+<form class="form-horizontal" action="{{route('submitPayment')}}" method="post">
 <div class="form-group">
   <label for="type" class="col-sm-2 control-label">Account Type</label>
   <div class="col-sm-2">
@@ -51,7 +59,7 @@ Payment Details
   <div class="form-group">
     <label for="address" class="col-sm-2 control-label">Bank Address</label>
     <div class="col-sm-5">
-                <textarea class="form-control" rows="6" id="description" name="description"></textarea>
+                <textarea class="form-control" rows="6" id="address" name="address"></textarea>
               </div>
     </div>
     <div class="form-group">

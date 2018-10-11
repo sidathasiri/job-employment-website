@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
 use App\JobPost;
 use App\Application;
+use App\Payment;
 
 class PostController extends Controller
 {
@@ -56,4 +57,48 @@ class PostController extends Controller
         $application->save();
         return redirect()->route('applicaiton');
     }
+
+    public function submitPayment(Request $request){
+
+        $this->validate($request, [
+            'type' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'accountNumber' => 'required',
+            'routingNumber' => 'required',
+            'bankName' => 'required',
+            'address' => 'required',
+            'question1' => 'required',
+            'question1Ans' => 'required',
+            'question2' => 'required',
+            'question2Ans' => 'required',
+            'question3' => 'required',
+            'question3Ans' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $payment = new Payment([
+            'type' => $request->input('type'),
+            'holder_name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'account_number' => $request->input('accountNumber'),
+            'routing_number' => $request->input('routingNumber'),
+            'bank_name' => $request->input('bankName'),
+            'address' => $request->input('address'),
+            'question1' => $request->input('question1'),
+            'question1_ans' => $request->input('question1Ans'),
+            'question2' => $request->input('question2'),
+            'question2_ans' => $request->input('question2Ans'),
+            'question3' => $request->input('question3'),
+            'question3_ans' => $request->input('question3Ans'),
+            'username' => $request->input('username'),
+            'password' => $request->input('password')
+        ]);
+
+        $payment->save();
+        return redirect()->route('paymentDetails');
+    }
 }
+
+            

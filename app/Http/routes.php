@@ -36,6 +36,11 @@ Route::post('/submitApplicaiton', [
     'as' => 'submitApplicaiton'
 ]);
 
+Route::post('/submitPayment', [
+    'uses' => 'PostController@submitPayment',
+    'as' => 'submitPayment'
+]);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::get('/', [
         'uses' => 'AdminController@getSignin',
