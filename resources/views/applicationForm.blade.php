@@ -8,7 +8,7 @@ Application Form
   <h1>Application Form <small>Personal Information Required for an Employment Application</small></h1>
 </div>
 
-<form class="form-horizontal">
+<form class="form-horizontal" action="{{route('submitApplicaiton')}}" method="post">
   <div class="form-group">
     <label for="name" class="col-sm-2 control-label">Name</label>
     <div class="col-sm-6">
@@ -55,10 +55,10 @@ Application Form
     <label for="q1" class="col-sm-2 control-label">Are you eligible to work in the United States? </label>
     <div class="col-sm-6">
       <div class="radio">
-        <label><input type="radio" name="isEligible" checked>Yes</label>
+        <label><input type="radio" value="Yes" id="eligibleY" name="isEligible" checked>Yes</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="isEligible">No</label>
+        <label><input type="radio" value="No" id="eligibleN" name="isEligible">No</label>
       </div>
     </div>
   </div>
@@ -66,10 +66,10 @@ Application Form
     <label for="q2" class="col-sm-2 control-label">If you are under age eighteen, do you have an employment certificate? </label>
     <div class="col-sm-6">
       <div class="radio">
-        <label><input type="radio" name="haveCertificate" checked>Yes</label>
+        <label><input type="radio" value="Yes" id="certificateY" name="haveCertificate" checked>Yes</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="haveCertificate">No</label>
+        <label><input type="radio" value="No" id="certificateN" name="haveCertificate">No</label>
       </div>
     </div>
   </div>
@@ -77,10 +77,10 @@ Application Form
     <label for="q3" class="col-sm-2 control-label">Have you been convicted of a felony within the last five years?  </label>
     <div class="col-sm-6">
       <div class="radio">
-        <label><input type="radio" name="isConvicted" checked>Yes</label>
+        <label><input type="radio" name="isConvicted" id="convictedY" value="Yes" checked>Yes</label>
       </div>
       <div class="radio">
-        <label><input type="radio" name="isConvicted">No</label>
+        <label><input type="radio" name="isConvicted" id="convictedN" value="No">No</label>
       </div>
     </div>
   </div>
