@@ -18,6 +18,11 @@
       <div class="panel-body">
         {{$post->description}}
       </div>
+      @if(Auth::check())
+      <div class="clearfix">
+      <a style="margin:10px" class="btn btn-sm btn-danger pull-right" id="{{$post->id}}">Delete</a>
+      </div>
+      @endif
   </div>
 </div>
 @endforeach
