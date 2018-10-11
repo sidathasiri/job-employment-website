@@ -13,7 +13,7 @@
 
 <h2 style="color:white">Top Jobs</h2>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     @foreach($posts as $post)
